@@ -1,0 +1,54 @@
+{
+  "name": "third-eye",
+  "private": true,
+  "version": "0.1.1",
+  "description": "Third Eye \u2014 real-time eye on planet Earth. Live aircraft, satellites, earthquakes, traffic, public cameras on a photorealistic globe. India-first, Surat-born.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Bilawal Sidhu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panther742/Third-EYE.git"
+  },
+  "engines": {
+    "node": ">=24.14.0 <25 || >=26 <27"
+  },
+  "keywords": [
+    "third-eye",
+    "live-globe",
+    "cesium",
+    "flight-tracking",
+    "osint",
+    "india",
+    "surat",
+    "real-time",
+    "satellite-tracking",
+    "traffic"
+  ],
+  "scripts": {
+    "doctor": "node scripts/setup-doctor.mjs",
+    "dev": "vite",
+    "dev:secure": "./scripts/dev-secure.sh",
+    "opensky:import": "./scripts/opensky-import-client.sh",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node scripts/run-unit-tests.mjs",
+    "test:track": "node scripts/track-regression.mjs",
+    "qa:map-source-tray": "node scripts/qa-map-source-tray.mjs"
+  },
+  "dependencies": {
+    "@mapbox/vector-tile": "^3.0.0",
+    "cesium": "^1.124.0",
+    "egm96-universal": "^1.1.1",
+    "mgrs": "^2.1.0",
+    "pbf": "^5.1.2",
+    "satellite.js": "^6.0.2"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.37.5",
+    "sharp": "^0.34.5",
+    "vite": "^6.0.0",
+    "vite-plugin-cesium": "^1.2.23",
+    "ws": "^8.21.0"
+  }
+}
